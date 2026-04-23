@@ -1,0 +1,66 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    display: grid;
+    gap: 10px;
+    min-height: 100vh;
+}
+
+header, aside, main, footer {
+    padding: 20px;
+    border: 1px solid whitesmoke;
+}
+
+header, footer {
+    background-color: lightgray;
+    text-align: center;
+}
+
+.site-main {
+    grid-area: main;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.project-card img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: blocks;
+    margin: 10px auto;
+    border-radius: 4px;
+    border: 1px solid, peachpuff;
+}
+
+aside nav a {
+    display: block;
+    margin-bottom: 15px;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+body {
+    grid-template-areas:
+    "header"
+    "aside"
+    "main"
+    "footer";
+}
+header {grid-area: header;}
+aside {grid-area: aside;}
+main {grid-area: main;}
+footer {grid-area: footer;}
+
+@media (min-width: 768px) {
+    body {
+        grid-template-columns: 1fr 4fr;
+        grid-template-rows: auto 1fr auto;
+        grid-template-areas:
+        "header header"
+        "aside main"
+        "footer footer";
+    }
+}
